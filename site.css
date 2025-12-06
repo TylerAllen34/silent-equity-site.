@@ -60,20 +60,38 @@ html, body {
   text-decoration: none;
   color: var(--ink);
 }
-.logo {
-  height: 32px;         /* 🔹 Cleaner header size */
-  width: auto;
-  object-fit: contain;
-  display: block;
-  border-radius: 0;     /* 🔹 Let your logo shape stand on its own */
+
+/* NEW: logo made from 3 bars */
+.logo-mark {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-/* Optional: make logo a bit smaller on mobile */
+.logo-bar {
+  width: 26px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--accent);   /* blue from your theme */
+}
+
+/* Wordmark text next to the icon */
+.logo-wordmark {
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}
+
+/* Optional: tweak logo size on small screens */
 @media (max-width: 600px) {
-  .logo {
-    height: 26px;
+  .logo-bar {
+    width: 22px;
+    height: 3px;
+  }
+  .logo-wordmark {
+    font-size: 14px;
   }
 }
+
 
 .nav nav a {
   color: var(--ink);
