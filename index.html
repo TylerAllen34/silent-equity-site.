@@ -306,42 +306,59 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <div class="wrap grid">
-      <div>
-        <h2>Start Your System Build</h2>
-        <p class="muted">Tell us about your business, current tools, and where things feel messy.</p>
-        <div class="row gap">
-          <a class="btn ghost" href="mailto:tytechinvestmentsllc@gmail.com">Email Us</a>
-          <a class="btn" href="#crm">Choose a System</a>
-        </div>
+ <section id="contact" class="contact">
+  <div class="wrap grid">
+
+    <div>
+      <h2>Start Your System Build</h2>
+      <p class="muted">
+        Tell us about your business, current tools, and where things feel messy.
+        You can also reach us directly:
+      </p>
+
+      <div class="row gap">
+        <a class="btn ghost" href="mailto:info@silentequity.pro">info@silentequity.pro</a>
+        <a class="btn ghost" href="tel:+18329428769">Call/Text: (832) 942-8769</a>
       </div>
 
-      <div class="panel soft">
-        <form action="https://formsubmit.co/tytechinvestmentsllc@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="Silent Equity — New Inquiry">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="thankyou.html">
-          <label>Name<input name="Name" required></label>
-          <label>Email<input name="Email" type="email" required></label>
-          <label>Project<textarea name="Message" rows="4" required></textarea></label>
-          <button type="submit" class="btn primary block">Send Inquiry</button>
-        </form>
-      </div>
+      <p class="muted" style="margin-top: 10px;">
+        Prefer a full inquiry? Use the form →
+      </p>
     </div>
-  </section>
 
-  <footer class="foot">
-    <div class="wrap row space">
-      <div>© <span id="y"></span> Silent Equity LLC — AI Systems & Automation</div>
-      <div class="muted">Built for precision, continuity, and scale.</div>
+    <div class="panel soft">
+      <form action="https://formsubmit.co/info@silentequity.pro" method="POST">
+
+        <!-- REQUIRED FIXED FIELDS -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://silentequity.pro/thankyou.html">
+
+        <label>Name<input name="Name" required></label>
+        <label>Email<input name="Email" type="email" required></label>
+        <label>Project<textarea name="Message" rows="4" required></textarea></label>
+
+        <button type="submit" class="btn primary block">Send Inquiry</button>
+      </form>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  </div>
+</section>
 
-</body>
-</html>
+ <footer class="foot">
+  <div class="wrap row space">
+    <div>
+      © <span id="y"></span> Silent Equity LLC — AI Systems & Automation
+    </div>
 
+    <div class="muted">
+      <a href="mailto:info@silentequity.pro" style="color: var(--muted); text-decoration: none;">
+        info@silentequity.pro
+      </a>
+      &nbsp;•&nbsp;
+      <a href="tel:+18329428769" style="color: var(--muted); text-decoration: none;">
+        (832) 942-8769
+      </a>
+    </div>
+  </div>
+</footer>
