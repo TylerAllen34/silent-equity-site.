@@ -21,15 +21,29 @@
         <span class="logo-wordmark">SilentEquity</span>
       </a>
 
-      <nav>
-        <a href="#about">About</a>
-        <a href="#packages">Content Systems</a>
-        <a href="#crm">CRM &amp; Automation</a>
-        <a href="#system">Viral Script System</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+       <!-- Desktop Menu -->
+    <nav class="desktop-nav">
+      <a href="#about">About</a>
+      <a href="#packages">Content Systems</a>
+      <a href="#crm">CRM &amp; Automation</a>
+      <a href="#system">Viral Script System</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#packages" onclick="toggleMenu()">Content Systems</a>
+    <a href="#crm" onclick="toggleMenu()">CRM & Automation</a>
+    <a href="#system" onclick="toggleMenu()">Viral Script System</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+</header>
 
   <section id="top" class="hero">
     <div class="wrap grid">
