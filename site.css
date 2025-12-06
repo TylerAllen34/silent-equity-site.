@@ -374,3 +374,39 @@ textarea:focus {
   padding: 22px 0;
   border-top: 1px solid var(--line);
 }
+/* MOBILE NAVIGATION */
+.mobile-menu-btn {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: #0f1625;
+  border-top: 1px solid var(--line);
+  padding: 10px 0;
+}
+
+.mobile-nav a {
+  padding: 12px 20px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+/* HIDE desktop menu on mobile */
+@media (max-width: 780px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+}
