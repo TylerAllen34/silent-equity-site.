@@ -21,52 +21,60 @@
         <span class="logo-wordmark">SilentEquity</span>
       </a>
 
-       <!-- Desktop Menu -->
-    <nav class="desktop-nav">
-      <a href="#about">About</a>
-      <a href="#packages">Content Systems</a>
-      <a href="#crm">CRM &amp; Automation</a>
-      <a href="#system">Viral Script System</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <!-- Desktop Menu -->
+      <nav class="desktop-nav">
+        <a href="#about">About</a>
+        <a href="#packages">Content Systems</a>
+        <a href="#crm">Systems</a>
+        <a href="#system">Script System</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <!-- Mobile Menu Button -->
-    <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+      <!-- Mobile Menu Button -->
+      <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+    </div>
 
-  </div>
-
-  <!-- Mobile Dropdown -->
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#about" onclick="toggleMenu()">About</a>
-    <a href="#packages" onclick="toggleMenu()">Content Systems</a>
-    <a href="#crm" onclick="toggleMenu()">CRM & Automation</a>
-    <a href="#system" onclick="toggleMenu()">Viral Script System</a>
-    <a href="#contact" onclick="toggleMenu()">Contact</a>
-  </div>
-</header>
+    <!-- Mobile Dropdown -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#packages" onclick="toggleMenu()">Content Systems</a>
+      <a href="#crm" onclick="toggleMenu()">Systems</a>
+      <a href="#system" onclick="toggleMenu()">Script System</a>
+      <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+  </header>
 
   <section id="top" class="hero">
     <div class="wrap grid">
       <div>
         <div class="badge">AI • CRM • Automation</div>
         <h1>Where <span class="glow">AI</span> Meets <span class="glow">Automation</span></h1>
+
         <p class="lead">
           AI-powered systems for coaches, creators, and agencies. Silent Equity designs the CRM, automations, and client portals that quietly run your business in the background—so you can focus on growth, not glue work.
         </p>
+
         <div class="buttons">
           <a class="btn primary" href="#crm">See Systems</a>
           <a class="btn ghost" href="#contact">Book a Call</a>
+          <!-- Separate page for AI Agents -->
+          <a class="btn ghost" href="ai-agents.html">View AI Agents</a>
         </div>
       </div>
 
       <div class="panel">
-        <h3>What We Build</h3>
+        <h3>Problems We Eliminate</h3>
         <ul class="bullets">
-          <li>CRM and pipeline systems in Airtable or your existing stack</li>
-          <li>Client portals for onboarding, delivery, and reporting</li>
-          <li>AI receptionists, lead intake, and follow-up automations</li>
-          <li>End-to-end automation maps for your operations and offers</li>
+          <li>Missed leads and slow response times</li>
+          <li>Manual follow-ups and repetitive admin work</li>
+          <li>Disconnected tools and messy handoffs</li>
+          <li>Spreadsheets that hide what’s happening in your pipeline</li>
         </ul>
+        <p class="muted" style="margin-top: 10px;">
+          We build ownership-first systems so your operations are trackable, automated, and scalable.
+        </p>
       </div>
     </div>
   </section>
@@ -112,34 +120,7 @@
     </div>
   </section>
 
-  <section id="why" class="metrics">
-    <div class="wrap">
-      <h2 class="center">Why Work With Silent Equity</h2>
-      <p class="muted center">Modern systems, clear communication, and builds designed to scale with you.</p>
-
-      <div class="metrics-grid">
-        <div class="metric">
-          <div class="metric-number">99%</div>
-          <div class="metric-label">Projects Delivered On-Scope*</div>
-        </div>
-        <div class="metric">
-          <div class="metric-number">25+</div>
-          <div class="metric-label">Systems & SOPs Productized*</div>
-        </div>
-        <div class="metric">
-          <div class="metric-number">5–10x</div>
-          <div class="metric-label">More Visibility vs. Spreadsheets*</div>
-        </div>
-        <div class="metric">
-          <div class="metric-number">24/7</div>
-          <div class="metric-label">Automations Working For You</div>
-        </div>
-      </div>
-
-      <p class="fineprint center">*Sample figures shown as placeholders.</p>
-    </div>
-  </section>
-
+  <!-- CONTENT SYSTEMS -->
   <section id="packages" class="packages">
     <div class="wrap">
       <h2 class="center">Cinematic Content Systems</h2>
@@ -193,13 +174,13 @@
     </div>
   </section>
 
+  <!-- CRM SYSTEMS -->
   <section id="crm" class="packages">
     <div class="wrap">
-      <h2 class="center">CRM & Automation Systems</h2>
-      <p class="muted center">Pick the automation engine that matches your operations. Upgrade anytime.</p>
+      <h2 class="center">AI Business Operating Systems</h2>
+      <p class="muted center">Own your infrastructure. Track every lead. Automate delivery. Upgrade anytime.</p>
 
       <div class="cards">
-
         <div class="card">
           <div class="row space">
             <h3>SilentStart CRM Engine</h3>
@@ -247,16 +228,21 @@
           </ul>
           <a class="btn primary block" target="_blank" href="https://buy.stripe.com/aFa8wP0J64zt2e16rW18c06">Select SilentEmpire — $7,500</a>
         </div>
-
       </div>
+
+      <p class="muted center" style="margin-top:14px;">
+        Want AI agents (website assistant, receptionist, internal assistant) as a standalone service?
+        <a href="ai-agents.html" style="color: var(--accent); text-decoration: none;">View AI Agents →</a>
+      </p>
     </div>
   </section>
 
+  <!-- SCRIPT SYSTEM -->
   <section id="system" class="system">
     <div class="wrap grid">
       <div>
-        <h2>The Viral Script System (Add-On)</h2>
-        <p class="muted">Your personal AI filmmaking assistant, connected to your systems.</p>
+        <h2>The Viral Script System (Self-Serve Add-On)</h2>
+        <p class="muted">Your personal AI filmmaking assistant for consistent short-form scripting and structure.</p>
         <ul class="ticks">
           <li>Built-in hooks, timing, and pacing</li>
           <li>Character voice + POV templates</li>
@@ -276,21 +262,21 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
   <section id="testimonials" class="testimonials">
     <div class="wrap">
       <h2 class="center">What Clients Say</h2>
-      <p class="muted center">Sample testimonials are for layout use only.</p>
+      <p class="muted center">Early feedback from system builds and pilot implementations.</p>
 
       <div class="cards testimonials-grid">
-
         <div class="card testimonial-card">
           <div class="testimonial-header">
             <div class="testimonial-name">Jordan Reyes</div>
             <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
           </div>
-          <div class="time muted">a month ago</div>
+          <div class="time muted">recently</div>
           <p class="testimonial-text">
-            “Silent Equity transformed my operations. Automations work 24/7 and I always know exactly where every lead is.”
+            “Silent Equity helped clean up our pipeline and automate follow-ups so nothing slips. I can finally see what’s happening across leads and delivery.”
           </p>
         </div>
 
@@ -299,9 +285,9 @@
             <div class="testimonial-name">Ashley Coleman</div>
             <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
           </div>
-          <div class="time muted">a year ago</div>
+          <div class="time muted">recently</div>
           <p class="testimonial-text">
-            “Before Silent Equity, everything was scattered. Now my CRM, calls, onboarding, and reporting flow perfectly.”
+            “Before Silent Equity, our tools were scattered. Now onboarding, communication, and reporting run inside one clear system.”
           </p>
         </div>
 
@@ -310,83 +296,79 @@
             <div class="testimonial-name">Marcus Lee</div>
             <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
           </div>
-          <div class="time muted">a few weeks ago</div>
+          <div class="time muted">recently</div>
           <p class="testimonial-text">
-            “The AI receptionist alone saved me hours every week. Clients get instant replies even when I’m offline.”
+            “The AI receptionist saved us hours. Clients get instant replies and we capture leads even outside business hours.”
           </p>
         </div>
-
       </div>
     </div>
   </section>
 
- <section id="contact" class="contact">
-  <div class="wrap grid">
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap grid">
+      <div>
+        <h2>Design My System</h2>
+        <p class="muted">
+          Tell us about your business, current tools, and where things feel messy.
+          You can also reach us directly:
+        </p>
 
-    <div>
-      <h2>Start Your System Build</h2>
-      <p class="muted">
-        Tell us about your business, current tools, and where things feel messy.
-        You can also reach us directly:
-      </p>
+        <div class="row gap">
+          <a class="btn ghost" href="mailto:info@silentequity.pro">info@silentequity.pro</a>
+          <a class="btn ghost" href="tel:+18329428769">Call/Text: (832) 942-8769</a>
+        </div>
 
-      <div class="row gap">
-        <a class="btn ghost" href="mailto:info@silentequity.pro">info@silentequity.pro</a>
-        <a class="btn ghost" href="tel:+18329428769">Call/Text: (832) 942-8769</a>
+        <p class="muted" style="margin-top: 10px;">
+          Prefer a full inquiry? Use the form →
+        </p>
       </div>
 
-      <p class="muted" style="margin-top: 10px;">
-        Prefer a full inquiry? Use the form →
-      </p>
+      <div class="panel soft">
+        <form action="https://formsubmit.co/info@silentequity.pro" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://silentequity.pro/thankyou.html">
+
+          <label>Name<input name="Name" required></label>
+          <label>Email<input name="Email" type="email" required></label>
+          <label>Project<textarea name="Message" rows="4" required></textarea></label>
+
+          <button type="submit" class="btn primary block">Send Inquiry</button>
+        </form>
+      </div>
     </div>
+  </section>
 
-    <div class="panel soft">
-      <form action="https://formsubmit.co/info@silentequity.pro" method="POST">
+  <footer class="foot">
+    <div class="wrap row space">
+      <div>
+        © <span id="y"></span> Silent Equity LLC — AI Systems & Automation
+      </div>
 
-        <!-- REQUIRED FIXED FIELDS -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://silentequity.pro/thankyou.html">
-
-        <label>Name<input name="Name" required></label>
-        <label>Email<input name="Email" type="email" required></label>
-        <label>Project<textarea name="Message" rows="4" required></textarea></label>
-
-        <button type="submit" class="btn primary block">Send Inquiry</button>
-      </form>
+      <div class="muted">
+        <a href="mailto:info@silentequity.pro" style="color: var(--muted); text-decoration: none;">
+          info@silentequity.pro
+        </a>
+        &nbsp;•&nbsp;
+        <a href="tel:+18329428769" style="color: var(--muted); text-decoration: none;">
+          (832) 942-8769
+        </a>
+      </div>
     </div>
+  </footer>
 
-  </div>
-</section>
-
- <footer class="foot">
-  <div class="wrap row space">
-    <div>
-      © <span id="y"></span> Silent Equity LLC — AI Systems & Automation
-    </div>
-
-    <div class="muted">
-      <a href="mailto:info@silentequity.pro" style="color: var(--muted); text-decoration: none;">
-        info@silentequity.pro
-      </a>
-      &nbsp;•&nbsp;
-      <a href="tel:+18329428769" style="color: var(--muted); text-decoration: none;">
-        (832) 942-8769
-      </a>
-    </div>
-  </div>
-</footer>
   <script>
-function toggleMenu() {
-  const nav = document.getElementById('mobileNav');
-  nav.classList.toggle('open');
-}
-</script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('open');
+    }
+  </script>
 
-<!-- Footer Year Script -->
-<script>
-document.getElementById('y').textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
