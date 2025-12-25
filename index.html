@@ -440,6 +440,98 @@ FULL UPDATED index.html
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+<!-- =========================
+AI CHAT WIDGET
+========================= -->
+<div id="ai-chat-launcher" aria-label="Open chat">💬</div>
+
+<div id="ai-chatbox" class="hidden">
+  <div id="ai-chat-header">
+    <div>
+      <div class="title">Silent Equity Assistant</div>
+      <div class="subtitle">Ask anything about systems & AI</div>
+    </div>
+    <button id="ai-chat-close" aria-label="Close chat">×</button>
+  </div>
+
+  <div id="ai-chat-messages"></div>
+
+  <div id="ai-chat-input-row">
+    <input id="ai-chat-input" type="text" placeholder="Type your message…" />
+    <button id="ai-chat-send">Send</button>
+  </div>
+</div>
+
+<script>
+  const messages = [
+    { role: "assistant", content: "Hey! How can I help you today?" }
+  ];
+
+  const launcher = document.getElementById("ai-chat-launcher");
+  const box = document.getElementById("ai-chatbox");
+  const closeBtn = document.getElementById("ai-chat-close");
+  const msgWrap = document.getElementById("ai-chat-messages");
+  const input = document.getElementById("ai-chat-input");
+  const sendBtn = document.getElementById("ai-chat-send");
+
+  function render() {
+    msgWrap.innerHTML = "";
+    messages.forEach(m => {
+      const row = document.createElement("div");
+      row.className = "msg-row " + (m.role === "user" ? "user" : "assistant");
+
+      const bubble = document.createElement("div");
+      bubble.className = "bubble " + (m.role === "user" ? "user" : "assistant");
+      bubble.textContent = m.content;
+
+      row.appendChild(bubble);
+      msgWrap.appendChild(row);
+    });
+    msgWrap.scrollTop = msgWrap.scrollHeight;
+  }
+
+  async function sendMessage() {
+    const text = input.value.trim();
+    if (!text) return;
+
+    messages.push({ role: "user", content: text });
+    input.value = "";
+    render();
+    sendBtn.disabled = true;
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages })
+      });
+
+      const data = await res.json();
+      messages.push({ role: "assistant", content: data.reply || "No response." });
+    } catch {
+      messages.push({ role: "assistant", content: "Something went wrong. Please try again." });
+    }
+
+    sendBtn.disabled = false;
+    render();
+  }
+
+  launcher.onclick = () => {
+    box.classList.remove("hidden");
+    launcher.classList.add("hidden");
+    render();
+  };
+
+  closeBtn.onclick = () => {
+    box.classList.add("hidden");
+    launcher.classList.remove("hidden");
+  };
+
+  sendBtn.onclick = sendMessage;
+  input.addEventListener("keydown", e => e.key === "Enter" && sendMessage());
+
+  render();
+</script>
 
 </body>
 </html>
