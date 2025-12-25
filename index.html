@@ -441,32 +441,38 @@ FULL UPDATED index.html
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 <!-- =========================
-AI CHAT WIDGET
+AI CHAT WIDGET (UPDATED)
 ========================= -->
-<div id="ai-chat-launcher" aria-label="Open chat">💬</div>
+<button id="ai-chat-launcher" type="button" aria-label="Open chat">
+  <span class="chat-bars">
+    <span></span><span></span><span></span>
+  </span>
+</button>
 
-<div id="ai-chatbox" class="hidden">
+<div id="ai-chatbox" class="chat-hidden" role="dialog" aria-label="Chat assistant">
   <div id="ai-chat-header">
     <div>
-      <div class="title">Silent Equity Assistant</div>
-      <div class="subtitle">Ask anything about systems & AI</div>
+      <div class="chat-title">Silent Equity Assistant</div>
+      <div class="chat-subtitle">Ask anything • systems • pricing • support</div>
     </div>
-    <button id="ai-chat-close" aria-label="Close chat">×</button>
+    <button id="ai-chat-close" type="button" aria-label="Close chat">×</button>
   </div>
 
   <div id="ai-chat-messages"></div>
 
   <div id="ai-chat-input-row">
-    <input id="ai-chat-input" type="text" placeholder="Type your message…" />
-    <button id="ai-chat-send">Send</button>
+    <input id="ai-chat-input" type="text" placeholder="Type your message…" autocomplete="off" />
+    <button id="ai-chat-send" type="button">Send</button>
   </div>
 </div>
 
 <script>
+  // Chat state
   const messages = [
-    { role: "assistant", content: "Hey! How can I help you today?" }
+    { role: "assistant", content: "Hey! How can I help today?" }
   ];
 
+  // Elements
   const launcher = document.getElementById("ai-chat-launcher");
   const box = document.getElementById("ai-chatbox");
   const closeBtn = document.getElementById("ai-chat-close");
@@ -490,6 +496,18 @@ AI CHAT WIDGET
     msgWrap.scrollTop = msgWrap.scrollHeight;
   }
 
+  function openChat() {
+    box.classList.remove("chat-hidden");
+    launcher.classList.add("chat-hidden");
+    render();
+    setTimeout(() => input.focus(), 50);
+  }
+
+  function closeChat() {
+    box.classList.add("chat-hidden");
+    launcher.classList.remove("chat-hidden");
+  }
+
   async function sendMessage() {
     const text = input.value.trim();
     if (!text) return;
@@ -497,7 +515,9 @@ AI CHAT WIDGET
     messages.push({ role: "user", content: text });
     input.value = "";
     render();
+
     sendBtn.disabled = true;
+    sendBtn.textContent = "…";
 
     try {
       const res = await fetch("/api/chat", {
@@ -506,32 +526,44 @@ AI CHAT WIDGET
         body: JSON.stringify({ messages })
       });
 
-      const data = await res.json();
-      messages.push({ role: "assistant", content: data.reply || "No response." });
-    } catch {
-      messages.push({ role: "assistant", content: "Something went wrong. Please try again." });
-    }
+      const data = await res.json().catch(() => ({}));
 
-    sendBtn.disabled = false;
-    render();
+      if (!res.ok) {
+        // show the actual server error so you can diagnose
+        messages.push({
+          role: "assistant",
+          content: "I hit an error: " + (data.error || ("HTTP " + res.status)) + "."
+        });
+      } else {
+        messages.push({
+          role: "assistant",
+          content: (data.reply && data.reply.trim()) ? data.reply : "I didn’t get a reply back—try again."
+        });
+      }
+    } catch (e) {
+      messages.push({
+        role: "assistant",
+        content: "I couldn’t reach the server. Make sure you’re on the Vercel URL (not github.io)."
+      });
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = "Send";
+      render();
+    }
   }
 
-  launcher.onclick = () => {
-    box.classList.remove("hidden");
-    launcher.classList.add("hidden");
-    render();
-  };
-
-  closeBtn.onclick = () => {
-    box.classList.add("hidden");
-    launcher.classList.remove("hidden");
-  };
-
-  sendBtn.onclick = sendMessage;
-  input.addEventListener("keydown", e => e.key === "Enter" && sendMessage());
+  // Wire events (this fixes your close issue)
+  launcher.addEventListener("click", openChat);
+  closeBtn.addEventListener("click", closeChat);
+  sendBtn.addEventListener("click", sendMessage);
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") sendMessage();
+    if (e.key === "Escape") closeChat();
+  });
 
   render();
 </script>
+
 
 </body>
 </html>
