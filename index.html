@@ -1,13 +1,13 @@
 <!-- =========================
-FULL UPDATED index.html
+FULL UPDATED index.html (Agency-grade copy + positioning + conversion)
 ========================= -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Silent Equity — Where AI Meets Automation</title>
-  <meta name="description" content="Silent Equity designs AI-powered CRM, automation systems, and client portals for coaches, creators, and agencies.">
+  <title>Silent Equity — AI Systems, Automation, Client Portals</title>
+  <meta name="description" content="Silent Equity builds ownership-first AI systems: CRMs, automations, and client portals that run lead-to-delivery operations end-to-end.">
   <link rel="icon" href="assets/logo.png">
   <link rel="stylesheet" href="site.css">
 </head>
@@ -16,7 +16,7 @@ FULL UPDATED index.html
   <header class="nav">
     <div class="wrap row">
       <a href="#top" class="brand">
-        <div class="logo-mark">
+        <div class="logo-mark" aria-hidden="true">
           <span class="logo-bar"></span>
           <span class="logo-bar"></span>
           <span class="logo-bar"></span>
@@ -25,7 +25,7 @@ FULL UPDATED index.html
       </a>
 
       <!-- Desktop Menu -->
-      <nav class="desktop-nav">
+      <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#crm">Systems</a>
         <a href="#agents">AI Agents</a>
@@ -36,7 +36,7 @@ FULL UPDATED index.html
       </nav>
 
       <!-- Mobile Menu Button -->
-      <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+      <div class="mobile-menu-btn" role="button" tabindex="0" aria-label="Open menu" onclick="toggleMenu()">☰</div>
     </div>
 
     <!-- Mobile Dropdown -->
@@ -51,52 +51,63 @@ FULL UPDATED index.html
     </div>
   </header>
 
+  <!-- HERO -->
   <section id="top" class="hero">
     <div class="wrap grid">
       <div>
-        <div class="badge">AI • CRM • Automation</div>
-        <h1>Where <span class="glow">AI</span> Meets <span class="glow">Automation</span></h1>
+        <div class="badge">AI • CRM • Automation • Client Portals</div>
+        <h1>Build an <span class="glow">Operating System</span> for Your Business</h1>
 
         <p class="lead">
-          AI-powered systems for coaches, creators, and agencies. Silent Equity designs the CRM, automations, and client portals that quietly run your business in the background—so you can focus on growth, not glue work.
+          Silent Equity designs ownership-first systems that run your operations end-to-end —
+          lead capture, qualification, follow-up, onboarding, delivery, and support —
+          so growth doesn’t depend on you being online.
         </p>
 
-        <!-- UPDATED: removed “Book a Call” -->
         <div class="buttons">
-          <a class="btn primary" href="#crm">See Systems</a>
+          <a class="btn primary" href="#contact">Map My Operations</a>
+          <a class="btn ghost" href="#crm">See Systems</a>
           <a class="btn ghost" href="ai-agents.html">View AI Agents</a>
         </div>
+
+        <p class="fineprint" style="margin-top:10px;">
+          Built for coaches, creators, agencies, and service businesses that want clean execution — not tool chaos.
+        </p>
       </div>
 
       <div class="panel">
-        <h3>Problems We Eliminate</h3>
+        <h3>What Changes After Setup</h3>
         <ul class="bullets">
-          <li>Missed leads and slow response times</li>
-          <li>Manual follow-ups and repetitive admin work</li>
-          <li>Disconnected tools and messy handoffs</li>
-          <li>Spreadsheets that hide what’s happening in your pipeline</li>
+          <li><strong>Response time drops:</strong> leads get handled instantly, even after hours</li>
+          <li><strong>Follow-ups become automatic:</strong> no more “I forgot to reply” revenue leaks</li>
+          <li><strong>Delivery becomes trackable:</strong> every client has a clear next step</li>
+          <li><strong>Tools become one system:</strong> fewer logins, fewer handoffs, fewer mistakes</li>
         </ul>
         <p class="muted" style="margin-top: 10px;">
-          We build ownership-first systems so your operations are trackable, automated, and scalable.
+          The outcome: higher conversion, cleaner delivery, and less founder bottleneck.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about" class="about">
     <div class="wrap grid">
       <div>
         <h2>About Silent Equity</h2>
         <p>
-          Silent Equity is an AI systems studio founded by Tyler Allen. We design the quiet infrastructure behind high-performing online businesses: clean CRMs, automated workflows, and AI assistants that make every client feel like your only client.
+          Silent Equity is an AI systems studio founded by Tyler Allen. We build the quiet infrastructure behind
+          high-performing online businesses: CRMs, automation flows, client portals, and AI assistants
+          that keep operations moving without constant oversight.
         </p>
         <p>
           Our philosophy is simple:
           <em>strategy over stress, automation over busywork, and ownership over everything.</em>
-          You keep the relationships and the revenue. We build the engine that scales them.
+          You keep the relationships and the revenue — we build the engine that scales them.
         </p>
         <p class="muted">
-          Whether you’re just getting out of spreadsheets or replacing a broken tech stack, Silent Equity gives you one clear system to run leads, clients, and delivery from end to end.
+          If you’re replacing spreadsheets, patchwork tools, or a setup nobody understands, we’ll consolidate it into one clean system
+          with clear workflows, documentation, and roles.
         </p>
       </div>
 
@@ -105,21 +116,59 @@ FULL UPDATED index.html
         <div class="cols">
           <div>
             <strong>Precision:</strong>
-            <span class="muted">Every field, pipeline stage, and automation has a clear job. No clutter.</span>
+            <span class="muted">Every stage and automation has a job. No clutter, no confusion.</span>
           </div>
           <div>
             <strong>Continuity:</strong>
-            <span class="muted">Leads, calls, invoices, and delivery are connected so nothing slips through the cracks.</span>
+            <span class="muted">Leads → clients → delivery stay connected so nothing slips.</span>
           </div>
           <div>
             <strong>Speed:</strong>
-            <span class="muted">Fast builds, fast iteration, and responsive support as your business evolves.</span>
+            <span class="muted">Fast builds, fast iteration, responsive support as you evolve.</span>
           </div>
           <div>
             <strong>Ownership:</strong>
-            <span class="muted">You own the stack. We document everything so you’re never locked into a black box.</span>
+            <span class="muted">Documented and transparent. You’re never trapped in a black box.</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS (NEW) -->
+  <section id="how" class="about">
+    <div class="wrap grid">
+      <div>
+        <h2>How It Works</h2>
+        <p class="muted">
+          We don’t install “tools.” We configure an operating layer around how you already sell and deliver.
+        </p>
+
+        <ul class="ticks">
+          <li><strong>1) Map:</strong> We outline your lead flow + delivery flow (what happens, who does it, where it breaks).</li>
+          <li><strong>2) Build:</strong> We configure pipelines, forms, routing, automations, and portal views for each role.</li>
+          <li><strong>3) Run:</strong> We launch with documentation + guardrails so your system runs without you babysitting it.</li>
+        </ul>
+
+        <p class="muted" style="margin-top:10px;">
+          Result: faster response times, cleaner handoffs, and a system your team can actually use.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Tools vs. Operating System</h3>
+        <p class="muted">
+          Platforms like GoHighLevel are powerful if you want to DIY build and maintain workflows.
+          Silent Equity is for operators who want a configured system — with structure, logic, and documentation —
+          so execution doesn’t depend on constant tweaking.
+        </p>
+        <ul class="bullets">
+          <li><strong>DIY tools:</strong> you assemble, connect, and maintain</li>
+          <li><strong>Silent Equity:</strong> we configure the system around your SOPs and keep it clean</li>
+        </ul>
+        <p class="fineprint" style="margin-top:10px;">
+          No shade. Different buyer. Different outcome.
+        </p>
       </div>
     </div>
   </section>
@@ -133,50 +182,59 @@ FULL UPDATED index.html
       <div class="cards">
         <div class="card">
           <div class="row space">
-            <h3>SilentStart CRM Engine</h3>
+            <h3>SilentStart — Operations Foundation</h3>
             <div class="price">$2,500</div>
           </div>
-          <p class="muted">Foundation CRM to get you out of spreadsheets and into a clean, trackable system.</p>
+          <p class="muted">
+            A clean, trackable system to run leads and clients — built to eliminate spreadsheet chaos and missed follow-ups.
+          </p>
           <ul class="ticks">
-            <li>Custom CRM dashboard & pipelines</li>
-            <li>Lead & client management</li>
-            <li>Calendar + booking workflows</li>
+            <li>CRM pipelines + dashboards (real visibility)</li>
+            <li>Lead + client management</li>
+            <li>Intake + booking workflows</li>
             <li>Central inbox for email/SMS</li>
-            <li>Starter AI receptionist agent</li>
+            <li>Starter AI receptionist for first-touch response</li>
           </ul>
-          <a class="btn primary block" target="_blank" href="https://buy.stripe.com/6oU4gz8by2rldWJ5nS18c04">Select SilentStart — $2,500</a>
+          <p class="fineprint">Best for: getting organized fast with a system your team can actually use.</p>
+          <a class="btn primary block" target="_blank" href="https://buy.stripe.com/6oU4gz8by2rldWJ5nS18c04">Start SilentStart — $2,500</a>
         </div>
 
         <div class="card featured">
           <div class="row space">
-            <h3>SilentScale Automation System</h3>
+            <h3>SilentScale — Automated Client Journeys</h3>
             <div class="price">$4,500</div>
           </div>
-          <p class="muted">Full CRM plus automation built directly from your SOPs so client journeys run 24/7.</p>
+          <p class="muted">
+            We translate your SOPs into automations so follow-up, onboarding, and delivery move without manual chasing.
+          </p>
           <ul class="ticks">
             <li>Everything in SilentStart</li>
-            <li>Multi-step automations from your SOPs</li>
-            <li>Email + SMS nurture journeys</li>
+            <li>Multi-step automations built from your SOPs</li>
+            <li>Email + SMS nurture & follow-up journeys</li>
             <li>Automated onboarding & offboarding</li>
-            <li>Upgraded AI receptionist with routing</li>
+            <li>Upgraded AI receptionist with qualification + routing</li>
           </ul>
-          <a class="btn primary block" target="_blank" href="https://buy.stripe.com/9B6aEX77u8PJg4R03y18c05">Select SilentScale — $4,500</a>
+          <p class="fineprint">Best for: teams drowning in DMs, scheduling, and manual coordination.</p>
+          <a class="btn primary block" target="_blank" href="https://buy.stripe.com/9B6aEX77u8PJg4R03y18c05">Start SilentScale — $4,500</a>
         </div>
 
         <div class="card">
           <div class="row space">
-            <h3>SilentEmpire AI Infrastructure</h3>
+            <h3>SilentEmpire — Autonomous Infrastructure</h3>
             <div class="price">$7,500</div>
           </div>
-          <p class="muted">Your full AI & automation stack: CRM, marketing engine, and internal assistants.</p>
+          <p class="muted">
+            A full operating layer designed to remove the founder from day-to-day execution — with internal support and orchestration.
+          </p>
           <ul class="ticks">
             <li>Everything in SilentStart & SilentScale</li>
-            <li>AI-driven client journey orchestration</li>
-            <li>AI receptionist + lead qualification</li>
-            <li>Social & nurture automation integrations</li>
-            <li>Internal AI assistant for your team</li>
+            <li>AI-driven journey orchestration</li>
+            <li>Lead qualification + smarter routing logic</li>
+            <li>Marketing + nurture integrations</li>
+            <li>Internal AI assistant trained on SOPs</li>
           </ul>
-          <a class="btn primary block" target="_blank" href="https://buy.stripe.com/aFa8wP0J64zt2e16rW18c06">Select SilentEmpire — $7,500</a>
+          <p class="fineprint">Best for: scaling without becoming the bottleneck.</p>
+          <a class="btn primary block" target="_blank" href="https://buy.stripe.com/aFa8wP0J64zt2e16rW18c06">Build SilentEmpire — $7,500</a>
         </div>
       </div>
 
@@ -203,12 +261,12 @@ FULL UPDATED index.html
             <div class="badge">Front Desk</div>
           </div>
           <p class="muted">
-            Responds instantly, qualifies leads, books calls, and routes requests — so you never miss revenue opportunities.
+            Handles inquiries, qualification, and booking — so leads get processed instantly instead of sitting in your inbox.
           </p>
           <ul class="ticks">
-            <li>Instant replies to inquiries (24/7)</li>
-            <li>Lead intake + qualification (fit, budget, urgency)</li>
-            <li>Booking + routing to the right offer or team member</li>
+            <li>24/7 first-touch response</li>
+            <li>Qualification (fit, budget, urgency)</li>
+            <li>Routing to the right offer or next step</li>
           </ul>
         </div>
 
@@ -218,12 +276,12 @@ FULL UPDATED index.html
             <div class="badge">Sales Support</div>
           </div>
           <p class="muted">
-            Guides visitors, answers questions, and captures leads — turning traffic into booked calls.
+            Converts traffic into qualified leads by guiding visitors to the right package and capturing details cleanly.
           </p>
           <ul class="ticks">
             <li>Answers FAQs using your offers + policies</li>
-            <li>Recommends the right package based on needs</li>
-            <li>Captures contact info and pushes inquiries to your inbox/CRM</li>
+            <li>Recommends best-fit packages</li>
+            <li>Captures contact info and pushes to inbox/CRM</li>
           </ul>
         </div>
 
@@ -233,12 +291,12 @@ FULL UPDATED index.html
             <div class="badge">Operations</div>
           </div>
           <p class="muted">
-            Your team’s internal help desk — trained on your SOPs so work stays consistent and fast.
+            A team help desk trained on SOPs — reducing repeat questions and speeding up execution.
           </p>
           <ul class="ticks">
             <li>Answers SOP questions instantly</li>
             <li>Onboarding support for new hires/contractors</li>
-            <li>Reduces repeat questions and operational bottlenecks</li>
+            <li>Reduces bottlenecks and handoffs</li>
           </ul>
         </div>
       </div>
@@ -249,7 +307,7 @@ FULL UPDATED index.html
       </div>
 
       <p class="fineprint center" style="margin-top: 10px;">
-        Available as standalone builds or layered into your AI Business Operating System.
+        Available as standalone builds or layered into your Operating System.
       </p>
     </div>
   </section>
@@ -266,11 +324,11 @@ FULL UPDATED index.html
             <h3>Basic</h3>
             <div class="price">$1,000/mo</div>
           </div>
-          <p class="muted">A monthly baseline build to establish your look, pacing, and signature style.</p>
+          <p class="muted">A monthly baseline to establish your look, pacing, and signature style.</p>
           <ul class="ticks">
             <li>10–12 cinematic short-form videos per month</li>
-            <li>Commercial-grade framing, lighting, and pacing</li>
-            <li>Consistent visual style that elevates brand presence</li>
+            <li>Commercial-grade pacing + structure</li>
+            <li>Consistent visual direction</li>
           </ul>
           <a class="btn primary block" target="_blank" href="https://buy.stripe.com/3cI28rdvS0jdg4R8A418c00">Subscribe — $1,000/mo</a>
         </div>
@@ -280,11 +338,11 @@ FULL UPDATED index.html
             <h3>Standard</h3>
             <div class="price">$1,500/mo</div>
           </div>
-          <p class="muted">A monthly commercial content engine built for consistency, momentum, and growth.</p>
+          <p class="muted">A content engine built for consistency, momentum, and growth.</p>
           <ul class="ticks">
             <li>25–30 cinematic short-form videos per month</li>
-            <li>Structured pacing optimized for retention and replay</li>
-            <li>Weekly content drops that build audience familiarity</li>
+            <li>Retention-optimized pacing</li>
+            <li>Weekly content drops</li>
           </ul>
           <a class="btn primary block" target="_blank" href="https://buy.stripe.com/5kQ4gz4Zm5Dx19XcQk18c01">Subscribe — $1,500/mo</a>
         </div>
@@ -294,11 +352,11 @@ FULL UPDATED index.html
             <h3>Premium</h3>
             <div class="price">$1,800/mo</div>
           </div>
-          <p class="muted">Directed cinematic rollout with story flow and brand-level polish across releases.</p>
+          <p class="muted">Directed rollout with narrative flow and brand-level polish across releases.</p>
           <ul class="ticks">
-            <li>30+ cinematic videos per month with narrative flow</li>
-            <li>Story arcs and visual direction across releases</li>
-            <li>High-end polish designed to separate you from everyday creators</li>
+            <li>30+ cinematic videos per month</li>
+            <li>Story arcs + visual direction</li>
+            <li>High-end polish designed to differentiate</li>
           </ul>
           <a class="btn primary block" target="_blank" href="https://buy.stripe.com/fZudR9gI49TN2e16rW18c02">Subscribe — $1,800/mo</a>
         </div>
@@ -380,10 +438,10 @@ FULL UPDATED index.html
   <section id="contact" class="contact">
     <div class="wrap grid">
       <div>
-        <h2>Design My System</h2>
+        <h2>Map My Operations</h2>
         <p class="muted">
-          Tell us about your business, current tools, and where things feel messy.
-          You can also reach us directly:
+          Tell us what you sell, how leads come in, what tools you use now, and where things break.
+          We’ll recommend the cleanest system path.
         </p>
 
         <div class="row gap">
@@ -414,18 +472,12 @@ FULL UPDATED index.html
 
   <footer class="foot">
     <div class="wrap row space">
-      <div>
-        © <span id="y"></span> Silent Equity LLC — AI Systems & Automation
-      </div>
+      <div>© <span id="y"></span> Silent Equity LLC — AI Systems & Automation</div>
 
       <div class="muted">
-        <a href="mailto:info@silentequity.pro" style="color: var(--muted); text-decoration: none;">
-          info@silentequity.pro
-        </a>
+        <a href="mailto:info@silentequity.pro" style="color: var(--muted); text-decoration: none;">info@silentequity.pro</a>
         &nbsp;•&nbsp;
-        <a href="tel:+18329428769" style="color: var(--muted); text-decoration: none;">
-          (832) 942-8769
-        </a>
+        <a href="tel:+18329428769" style="color: var(--muted); text-decoration: none;">(832) 942-8769</a>
       </div>
     </div>
   </footer>
@@ -435,135 +487,123 @@ FULL UPDATED index.html
       const nav = document.getElementById('mobileNav');
       nav.classList.toggle('open');
     }
-  </script>
-
-  <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-<!-- =========================
-AI CHAT WIDGET (UPDATED)
-========================= -->
-<button id="ai-chat-launcher" type="button" aria-label="Open chat">
-  <span class="chat-bars">
-    <span></span><span></span><span></span>
-  </span>
-</button>
 
-<div id="ai-chatbox" class="chat-hidden" role="dialog" aria-label="Chat assistant">
-  <div id="ai-chat-header">
-    <div>
-      <div class="chat-title">Silent Equity Assistant</div>
-      <div class="chat-subtitle">Ask anything • systems • pricing • support</div>
+  <!-- =========================
+  AI CHAT WIDGET (YOUR ORIGINAL - kept)
+  ========================= -->
+  <button id="ai-chat-launcher" type="button" aria-label="Open chat">
+    <span class="chat-bars">
+      <span></span><span></span><span></span>
+    </span>
+  </button>
+
+  <div id="ai-chatbox" class="chat-hidden" role="dialog" aria-label="Chat assistant">
+    <div id="ai-chat-header">
+      <div>
+        <div class="chat-title">Silent Equity Assistant</div>
+        <div class="chat-subtitle">Ask anything • systems • pricing • support</div>
+      </div>
+      <button id="ai-chat-close" type="button" aria-label="Close chat">×</button>
     </div>
-    <button id="ai-chat-close" type="button" aria-label="Close chat">×</button>
+
+    <div id="ai-chat-messages"></div>
+
+    <div id="ai-chat-input-row">
+      <input id="ai-chat-input" type="text" placeholder="Type your message…" autocomplete="off" />
+      <button id="ai-chat-send" type="button">Send</button>
+    </div>
   </div>
 
-  <div id="ai-chat-messages"></div>
+  <script>
+    const messages = [{ role: "assistant", content: "Hey — what are you trying to automate or fix right now?" }];
 
-  <div id="ai-chat-input-row">
-    <input id="ai-chat-input" type="text" placeholder="Type your message…" autocomplete="off" />
-    <button id="ai-chat-send" type="button">Send</button>
-  </div>
-</div>
+    const launcher = document.getElementById("ai-chat-launcher");
+    const box = document.getElementById("ai-chatbox");
+    const closeBtn = document.getElementById("ai-chat-close");
+    const msgWrap = document.getElementById("ai-chat-messages");
+    const input = document.getElementById("ai-chat-input");
+    const sendBtn = document.getElementById("ai-chat-send");
 
-<script>
-  // Chat state
-  const messages = [
-    { role: "assistant", content: "Hey! How can I help today?" }
-  ];
+    function render() {
+      msgWrap.innerHTML = "";
+      messages.forEach(m => {
+        const row = document.createElement("div");
+        row.className = "msg-row " + (m.role === "user" ? "user" : "assistant");
 
-  // Elements
-  const launcher = document.getElementById("ai-chat-launcher");
-  const box = document.getElementById("ai-chatbox");
-  const closeBtn = document.getElementById("ai-chat-close");
-  const msgWrap = document.getElementById("ai-chat-messages");
-  const input = document.getElementById("ai-chat-input");
-  const sendBtn = document.getElementById("ai-chat-send");
+        const bubble = document.createElement("div");
+        bubble.className = "bubble " + (m.role === "user" ? "user" : "assistant");
+        bubble.textContent = m.content;
 
-  function render() {
-    msgWrap.innerHTML = "";
-    messages.forEach(m => {
-      const row = document.createElement("div");
-      row.className = "msg-row " + (m.role === "user" ? "user" : "assistant");
-
-      const bubble = document.createElement("div");
-      bubble.className = "bubble " + (m.role === "user" ? "user" : "assistant");
-      bubble.textContent = m.content;
-
-      row.appendChild(bubble);
-      msgWrap.appendChild(row);
-    });
-    msgWrap.scrollTop = msgWrap.scrollHeight;
-  }
-
-  function openChat() {
-    box.classList.remove("chat-hidden");
-    launcher.classList.add("chat-hidden");
-    render();
-    setTimeout(() => input.focus(), 50);
-  }
-
-  function closeChat() {
-    box.classList.add("chat-hidden");
-    launcher.classList.remove("chat-hidden");
-  }
-
-  async function sendMessage() {
-    const text = input.value.trim();
-    if (!text) return;
-
-    messages.push({ role: "user", content: text });
-    input.value = "";
-    render();
-
-    sendBtn.disabled = true;
-    sendBtn.textContent = "…";
-
-    try {
-      const res = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages })
+        row.appendChild(bubble);
+        msgWrap.appendChild(row);
       });
-
-      const data = await res.json().catch(() => ({}));
-
-      if (!res.ok) {
-        // show the actual server error so you can diagnose
-        messages.push({
-          role: "assistant",
-          content: "I hit an error: " + (data.error || ("HTTP " + res.status)) + "."
-        });
-      } else {
-        messages.push({
-          role: "assistant",
-          content: (data.reply && data.reply.trim()) ? data.reply : "I didn’t get a reply back—try again."
-        });
-      }
-    } catch (e) {
-      messages.push({
-        role: "assistant",
-        content: "I couldn’t reach the server. Make sure you’re on the Vercel URL (not github.io)."
-      });
-    } finally {
-      sendBtn.disabled = false;
-      sendBtn.textContent = "Send";
-      render();
+      msgWrap.scrollTop = msgWrap.scrollHeight;
     }
-  }
 
-  // Wire events (this fixes your close issue)
-  launcher.addEventListener("click", openChat);
-  closeBtn.addEventListener("click", closeChat);
-  sendBtn.addEventListener("click", sendMessage);
-  input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") sendMessage();
-    if (e.key === "Escape") closeChat();
-  });
+    function openChat() {
+      box.classList.remove("chat-hidden");
+      launcher.classList.add("chat-hidden");
+      render();
+      setTimeout(() => input.focus(), 50);
+    }
 
-  render();
-</script>
+    function closeChat() {
+      box.classList.add("chat-hidden");
+      launcher.classList.remove("chat-hidden");
+    }
 
+    async function sendMessage() {
+      const text = input.value.trim();
+      if (!text) return;
+
+      messages.push({ role: "user", content: text });
+      input.value = "";
+      render();
+
+      sendBtn.disabled = true;
+      sendBtn.textContent = "…";
+
+      try {
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ messages })
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (!res.ok) {
+          messages.push({ role: "assistant", content: "I hit an error: " + (data.error || ("HTTP " + res.status)) + "." });
+        } else {
+          messages.push({
+            role: "assistant",
+            content: (data.reply && data.reply.trim()) ? data.reply : "I didn’t get a reply back — try again."
+          });
+        }
+      } catch (e) {
+        messages.push({
+          role: "assistant",
+          content: "I couldn’t reach the server. If you’re testing locally, your /api/chat route may not be running."
+        });
+      } finally {
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send";
+        render();
+      }
+    }
+
+    launcher.addEventListener("click", openChat);
+    closeBtn.addEventListener("click", closeChat);
+    sendBtn.addEventListener("click", sendMessage);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") sendMessage();
+      if (e.key === "Escape") closeChat();
+    });
+
+    render();
+  </script>
 
 </body>
 </html>
