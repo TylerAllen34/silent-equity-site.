@@ -544,3 +544,140 @@ AI CHAT WIDGET (THEME FIX)
   cursor: pointer;
 }
 #ai-chat-send:disabled { opacity: 0.6; cursor: not-allowed; } " 
+
+/* =========================================
+   AGENCY POLISH PATCH (Drop-in)
+   Paste at END of site.css
+========================================= */
+
+/* Better text rendering */
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { line-height: 1.55; }
+
+/* Better spacing rhythm */
+.hero { padding: 86px 0; }
+.about { padding: 56px 0; }
+.packages { padding: 64px 0; }
+.system { padding: 64px 0; }
+.contact { padding: 64px 0; }
+.testimonials { padding: 72px 0; }
+
+/* Responsive typography */
+h1 {
+  font-size: clamp(34px, 4vw, 52px);
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: clamp(26px, 2.4vw, 34px);
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+}
+h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+.lead {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Make sections feel more premium with subtle gradients */
+.packages {
+  background:
+    radial-gradient(1000px 360px at 50% -10%, rgba(77,163,255,0.10) 0%, transparent 60%),
+    #0b121d;
+}
+.about {
+  background:
+    radial-gradient(900px 300px at 20% 0%, rgba(77,163,255,0.08) 0%, transparent 55%);
+}
+
+/* Panels: add slight gradient + inner border */
+.panel, .card, .cols > div {
+  position: relative;
+  overflow: hidden;
+}
+.panel::before,
+.card::before,
+.cols > div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 45%);
+  pointer-events: none;
+}
+.panel::after,
+.card::after,
+.cols > div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255,255,255,0.06);
+  pointer-events: none;
+}
+
+/* Cards: slightly tighter + more "SaaS" */
+.card {
+  border-radius: 18px;
+  padding: 20px;
+}
+.card.featured {
+  border-color: rgba(77,163,255,0.65);
+  box-shadow: 0 0 0 1px rgba(77,163,255,0.25), 0 20px 50px rgba(0,0,0,0.65);
+}
+.price {
+  font-size: 16px;
+  letter-spacing: 0.01em;
+}
+
+/* Better bullets */
+.ticks li, .bullets li {
+  line-height: 1.55;
+}
+.ticks li::marker { color: rgba(77,163,255,0.85); }
+
+/* Buttons: make ghost feel premium */
+.btn {
+  border-color: rgba(255,255,255,0.10);
+}
+.btn.ghost {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.10);
+}
+.btn.ghost:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(77,163,255,0.35);
+}
+
+/* Primary button: slightly more premium */
+.btn.primary {
+  box-shadow: 0 12px 34px rgba(77,163,255,0.22);
+}
+.btn.primary:hover {
+  box-shadow: 0 18px 50px rgba(77,163,255,0.30);
+}
+
+/* Navbar: reduce clutter + improve spacing */
+.nav nav a { opacity: 0.92; }
+.nav nav a:hover { opacity: 1; }
+
+/* Mobile: reduce hero padding, ensure buttons wrap nicely */
+@media (max-width: 780px) {
+  .hero { padding: 64px 0; }
+  .buttons { flex-wrap: wrap; }
+  .btn { width: auto; }
+}
+
+/* Make the wrap slightly wider on big screens */
+.wrap { max-width: 1160px; }
+
+/* Testimonial spacing */
+.testimonial-text { line-height: 1.6; }
+
+/* FORM: better spacing */
+label { margin-top: 12px; }
+input, textarea { padding: 12px; }
+
+/* Optional: utility class (if you use it later) */
+.kicker { text-transform: uppercase; letter-spacing: 0.12em; font-size: 11px; color: var(--muted); }
